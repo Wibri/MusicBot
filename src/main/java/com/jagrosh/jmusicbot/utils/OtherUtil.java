@@ -72,15 +72,15 @@ public class OtherUtil
         if(game==null || game.trim().isEmpty() || game.trim().equalsIgnoreCase("default"))
             return null;
         String lower = game.toLowerCase();
-        if(lower.startsWith("playing"))
+        if(lower.startsWith("Ouvindo"))
             return Game.playing(game.substring(7).trim());
-        if(lower.startsWith("listening to"))
+        if(lower.startsWith("Tocando"))
             return Game.listening(game.substring(12).trim());
-        if(lower.startsWith("listening"))
+        if(lower.startsWith("Listando"))
             return Game.listening(game.substring(9).trim());
-        if(lower.startsWith("watching"))
+        if(lower.startsWith("assistindo"))
             return Game.watching(game.substring(8).trim());
-        if(lower.startsWith("streaming"))
+        if(lower.startsWith("transmissão"))
         {
             String[] parts = game.substring(9).trim().split("\\s+", 2);
             if(parts.length == 2)
